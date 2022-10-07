@@ -1,0 +1,87 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+border: 20px;
+  border: 1px solid black;
+  border-color: black;
+  background-color:activeborder;
+  center;
+  width: 60%;
+  
+   }</style>
+<%String suss= (String)request.getAttribute("suss"); %>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+
+<body>
+<% 
+
+String pass = (String)request.getAttribute("pass");
+String blank1 = (String)request.getAttribute("blank1");
+String blank2 = (String)request.getAttribute("blank2");
+%>
+<h1 align ="center">
+<%
+if(suss != null){
+%>
+<%=suss%>
+<%} %>
+
+<form  method="post" action="login" ="center">
+
+<table>	
+
+<h2 align="center"> Login Form</h2>
+
+ 
+
+
+<tr>
+<th>User ID*:</th>
+<td><input type = "text" name="userid" value = "">
+
+<%
+if(blank1 != null){
+%>
+<%=blank1%>
+<%} %> 
+</td>
+</tr>
+
+<tr>
+<th>password*:</th>
+<td><input type = "password" name="password" value = "">
+<%
+if(blank2 != null){
+%>
+<%=blank2 %>
+<%} %>
+</td>
+</tr> 
+</h1>
+</table>
+<table>
+<th>
+<a href="Forgotpass.jsp"><%
+if(pass != null){
+%>
+<%=pass%>
+<%} %></a>
+</th
+</table>
+
+<table >
+
+<tr><td align="center"><input type = "submit" name = "Login" value="Log In">
+        <input type = "submit" name = "Singup" value="Sing Up">
+    </td></tr>
+</table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,101 @@
+package in.co.rays.ctl;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import in.co.rays.bean.Loginbean;
+import in.co.rays.bean.Registrationbean;
+import in.co.rays.model.Loginmodel;
+import in.co.rays.model.Registrationmodel;
+
+@WebServlet(urlPatterns = "/logic")
+public class Loginctl extends HttpServlet {
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			
+		}
+		
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		response.setContentType("text/html");
+		
+		String user = request.getParameter("user");
+		String password = request.getParameter("password");
+		PrintWriter ps = response.getWriter();
+		Loginbean bean =  new Loginbean();
+		
+		bean.setUser(user);
+		bean.setPassword(password);
+		
+		Loginmodel model = new Loginmodel();
+		Loginbean bean2 =null;
+		
+	try {
+		 bean2 = model.authenticate(user, password);
+		 
+			if (bean2 != null) {
+		
+			RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
+			request.setAttribute("error1", " got it ");
+			rd.forward(request, response);
+			//ps.println("suss");
+			}else {
+				RequestDispatcher rd1 = request.getRequestDispatcher("logicview.jsp");
+				request.setAttribute("pass", "Try again");
+				rd1.forward(request, response);
+				//ps.println("not done");
+			}
+	} catch (Exception e) {
+		e.printStackTrace();
+		// TODO: handle exception
+	}
+
+		
+		
+			/*
+			 * if (user.equals("")&&password.equals("")) { RequestDispatcher rd =
+			 * request.getRequestDispatcher("logicview.jsp");
+			 * 
+			 * request.setAttribute("error1", "Required user");
+			 * request.setAttribute("error2", " Required password");
+			 * 
+			 * rd.forward(request, response); }else {RequestDispatcher rd =
+			 * request.getRequestDispatcher("a.jsp"); request.setAttribute("error",
+			 * "invalid user or password"); rd.forward(request, response);
+			 * 
+			 * }
+			 */
+		
+					
+				/*
+				 * RequestDispatcher rd = request.getRequestDispatcher("registration.jsp");
+				 * request.setAttribute("error", "Invalid"); rd.forward(request, response);
+				 */	
+			
+			
+
+		/*
+		 * Loginbean bean = new Loginbean();
+		 * 
+		 * bean.setUser(user); bean.setPassword(password);
+		 */		
+		
+		
+		
+
+	
+		
+		
+		//PrintWriter out = response.getWriter();
+		//out.println("Inserted...........");
+		//out.close();
+	}
+
+}

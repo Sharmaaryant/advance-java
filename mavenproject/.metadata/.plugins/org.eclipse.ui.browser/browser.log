@@ -1,0 +1,14 @@
+
+Aug 26, 2022 18:19:16.10 NEW SESSION
+Aug 26, 2022 18:19:16.10 [10288:11620:0826/181916.102:ERROR:device_event_log_impl.cc(214)] [18:19:16.102] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 18:19:16.10 [10288:11620:0826/181916.104:ERROR:device_event_log_impl.cc(214)] [18:19:16.104] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 18:20:12.50 [10288:15984:0826/182012.501:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+Aug 26, 2022 18:21:08.35 [9560:13780:0826/182108.355:ERROR:device_event_log_impl.cc(214)] [18:21:08.355] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 18:21:08.35 [9560:13780:0826/182108.357:ERROR:device_event_log_impl.cc(214)] [18:21:08.357] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 22:18:13.39 [3324:4716:0826/221813.390:ERROR:device_event_log_impl.cc(214)] [22:18:13.391] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 22:18:13.39 [3324:4716:0826/221813.392:ERROR:device_event_log_impl.cc(214)] [22:18:13.392] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 22:18:38.42 [6932:9288:0826/221838.426:ERROR:device_event_log_impl.cc(214)] [22:18:38.426] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 22:18:38.42 [6932:9288:0826/221838.428:ERROR:device_event_log_impl.cc(214)] [22:18:38.428] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+Aug 26, 2022 22:20:34.16 [8816:6488:0826/222034.167:ERROR:assistance_home_client.cc(23)] File path C:\Users\dell\AppData\Local\Microsoft\Edge\User Data\Default
+Aug 26, 2022 22:20:36.56 [8816:6488:0826/222036.567:ERROR:edge_auth_errors.cc(415)] EDGE_IDENTITY: Get Default OS Account failed: Error: Primary Error: kTokenRequestFailed, Secondary Error: kTokenFetchUserInteractionRequired, Platform error: -2138701812, hex:8086000c, Error string: Error code: 0x8086000c, error message:Error
+Aug 26, 2022 22:20:36.56 

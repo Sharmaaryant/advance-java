@@ -1,0 +1,4 @@
+Driver=com.mysql.cj.jdbc.Driver
+Url=jdbc:mysql://localhost:3307/mvc
+Username=root
+Password=Babu@1234

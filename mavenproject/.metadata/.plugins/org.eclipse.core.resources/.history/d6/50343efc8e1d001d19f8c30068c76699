@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%String m = (String)request.getAttribute("m");
+String pass = (String)request.getAttribute("pass");%>
+
+<h1>
+<form  method="post" action="forgot">
+
+
+
+<h2 align="center"> To Get your Password recovered  </h2>
+<%
+if(m != null){
+%>
+<%=m%>
+<%} %>
+
+<table>
+
+<tr>
+<th>Write User Id :</th>
+<td><input type = "text" name="userid" value = "">
+<%
+if(pass != null){
+%>
+<%=pass%>
+<%} %>
+
+
+
+
+</td>
+</tr>
+
+
+</h1>
+</table>
+
+<table >
+
+<tr><td align="center"><input type = "submit" name = "Get" value="Get Password">
+       
+    </td></tr>
+</table>
+
+</form>
+</body>
+</html>

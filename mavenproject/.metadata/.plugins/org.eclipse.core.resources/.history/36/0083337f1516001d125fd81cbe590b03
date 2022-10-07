@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Profile</title>
+</head>
+<body>
+	<h1 align="center">My Profile</h1>
+	<form  method="get""TestingMethods.jsp">
+		<table align="center">
+			<tr>
+				<th>Login Id:</th>
+				<td><input type="email" name="email" value=""></td>
+			</tr>
+			<tr>
+				<th>First Name:</th>
+				<td><input type="text" name="fname" value=""></td>
+			</tr>
+			<tr>
+				<th>Last Name:</th>
+				<td><input type="text" name="lname" value=""></td>
+			</tr>
+			<tr>
+				<th>Mobile No:</th>
+				<td><input type="text" name="number" value=""></td>
+			</tr>
+			<tr>
+				<th><b>Date of birth:</b></th>
+				<td><input type="date" name="date" value=""></td>
+			</tr>
+			<tr>
+				<th><b>Gender:</b></th>
+				<td><label for="gender" style="text-align: center;"></label>
+						<input type="radio" name="gender" value=" male" selected>Male
+						<input type="radio" name ="gender"value="female" selected>Female
+						<input type="radio"name ="gender"value ="others" selected>Others</td>
+			</tr>
+			<tr><th></th>
+				<td><input type="submit" name="Login" value="Log In"> <input
+					type="submit" name="Cancel" value="Cancel"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+package in.co.rays.test;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import in.co.rays.bean.bean;
+import in.co.rays.model.tmodel;
+
+@WebServlet("/regi")
+public class regi extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response, int Id) throws Exception {
+	response.setContentType("text/html");
+	
+	String UserId   =  request.getParameter("Id");
+	String Std = request.getParameter("std");
+	String FirstName = request.getParameter("fname");
+	String LastName = request.getParameter("lname");
+	String  PhoneNo= request.getParameter("number");
+	String DOB = request.getParameter("date");
+	String Gender = request.getParameter("gender");
+	
+	bean Bean = new bean();
+	
+	Bean.setId(UserId);
+	Bean.setStd(Std);
+	Bean.setFname(FirstName);
+	Bean.setLname(LastName);
+	Bean.setNumber(PhoneNo);
+	Bean.setDate(DOB);
+	Bean.setGender(Gender);
+
+	tmodel model = new tmodel();
+	
+	model.add(Bean);
+	
+	PrintWriter out = response.getWriter();
+	out.println("INSERTED");
+	out.close();
+
+	
+	
+		
+	}
+
+}
